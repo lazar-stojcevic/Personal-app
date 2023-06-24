@@ -8,6 +8,10 @@ namespace Infrastructure
     {
         public DbSet<User> Students { get; set; }
 
+        public PersonalAppContext(DbContextOptions<PersonalAppContext> options) : base(options)
+        {
+        }
+
         protected override void OnModelCreating(ModelBuilder modelBuilder)
         {
             base.OnModelCreating(modelBuilder);
