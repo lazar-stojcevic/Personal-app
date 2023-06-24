@@ -11,7 +11,7 @@ builder.Services.AddEndpointsApiExplorer();
 builder.Services.AddSwaggerGen();
 builder.Services
     .AddApplication()
-    .AddInfrastructure();
+    .AddInfrastructure(builder.Configuration.GetConnectionString("Local"));
 
 var app = builder.Build();
 
